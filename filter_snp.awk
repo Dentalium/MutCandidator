@@ -6,6 +6,7 @@ BEGIN{
 }
 # 处理header
 /^#[^#]/{
+	# 简化突变体名称，用samples储存
 	for(i=10;i<=NF;i++){
         gsub(/^.*\//,"", $i)
 		samples[i]=$i
